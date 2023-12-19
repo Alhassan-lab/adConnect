@@ -15,23 +15,7 @@
     width: 90px;
     background-color: hsl(0, 0%, 99%);
 }
-@media (min-width: 768px) {
-    body {
-      font-size: 1.2em; /* Increase font size slightly for larger screens */
-    }
-  }
-  
-  /* Target mobile devices (portrait and landscape) */
-  @media (max-width: 767px) {
-    body {
-      font-size: 1em; /* Smaller font size for better readability */
-    }
-    /* Stack elements instead of placing them side-by-side */
-    .layout {
-      display: flex;
-      flex-direction: column;
-    }
-  }
+
 body{
     background-color: #0c1527;
     color: #EEE;
