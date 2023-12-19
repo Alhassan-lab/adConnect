@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" rel="stylesheet">
+  <title>User Profile</title>
+
+  <!-- Include your CSS styles here -->
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #0c1527;
+      color: white;
+    }
+
+    .profile-container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #1c1f2b;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Add more styling based on your preferences */
+  </style>
+
+</head>
+<body>
+
+<div class="profile-container">
+  <h2>User Profile</h2>
+
+  <!-- Upload Profile Picture -->
+  <div>
+    <h4>Upload Profile Picture</h4>
+    <input type="file" accept="image/*" id="profilePictureInput">
+    <button onclick="uploadProfilePicture()">Upload</button>
+  </div>
+
+  <!-- Settings -->
+  <div>
+    <h4>Settings</h4>
+    <!-- Add settings options and UI here -->
+  </div>
+
+  <!-- Subscriptions -->
+  <div>
+    <h4>Subscriptions</h4>
+    <!-- Display subscription information -->
+  </div>
+
+  <!-- Upload Advert Photos -->
+  <div>
+    <h4>Upload Advert Photos</h4>
+    <input type="file" accept="image/*" id="advertPhotosInput">
+    <button onclick="uploadAdvertPhotos()">Upload</button>
+  </div>
+
+  <!-- Update Location -->
+  <div>
+    <h4>Update Location</h4>
+    <input type="text" id="locationInput" placeholder="Enter your new location">
+    <button onclick="updateLocation()">Update</button>
+  </div>
+
+  <!-- Logout -->
+  <div>
+    <h4>Logout</h4>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+</div>
+
+<!-- Include your JavaScript scripts here -->
+<script>
+  function uploadProfilePicture() {
+    // Add logic to handle profile picture upload
+    alert("Profile picture uploaded!");
+  }
+
+  function uploadAdvertPhotos() {
+    // Add logic to handle advert photo upload
+    alert("Advert photos uploaded!");
+  }
+
+  function updateLocation() {
+    // Add logic to handle location update
+    alert("Location updated!");
+  }
+
+  function logout() {
+    // Add logic to handle logout
+    alert("Logged out successfully!");
+    // Redirect to the login page (replace 'login.html' with the actual filename)
+    window.location.href = 'login.html';
+  }
+</script>
+
+</body>
+</html>

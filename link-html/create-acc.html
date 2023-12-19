@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" rel="stylesheet">
+    <title>Fill Form</title>
+    <style>
+        body{
+            font-family: 'Outfit', sans-serif;
+            background-color:#0c1527;
+            color: white;
+            font-size: xx-large;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="mb-4">Business Information Form</h2>
+    
+    <form action="process_form.php" method="post">
+        
+        <div class="form-group">
+            <label for="inputBusinessName">Business Name</label>
+            <input type="text" class="form-control" id="inputBusinessName" placeholder="Enter your business name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="inputEmail">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="inputEmailConfirm">Re-enter Email</label>
+            <input type="email" class="form-control" id="inputEmailConfirm" placeholder="Re-enter your email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="inputLocation">Location</label>
+            <input type="text" class="form-control" id="inputLocation" placeholder="Enter your location" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="inputBusinessNumber">Business Number</label>
+            <input type="text" class="form-control" id="inputBusinessNumber" placeholder="Enter your business number" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="selectBusinessType">Type of Business</label>
+            <select class="form-control" id="selectBusinessType" required>
+                <option value="personal">Personal</option>
+                <option value="corporate">Corporate</option>
+            </select>
+        </div>
+        
+        <button type="submit" button type="button" class="btn bg-dark text-light"">Submit</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+   
+
+<script>
+  document.querySelector('form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the form from submitting
+
+    // Get the values from the form
+    const businessName = document.getElementById('inputBusinessName').value;
+    const email = document.getElementById('inputEmail').value;
+    const emailConfirm = document.getElementById('inputEmailConfirm').value;
+    const location = document.getElementById('inputLocation').value;
+    const businessNumber = document.getElementById('inputBusinessNumber').value;
+    const businessType = document.getElementById('selectBusinessType').value;
+
+    //  Check if the email and email confirmation match
+    if (email !== emailConfirm) {
+      alert("Email and email confirmation do not match. Please check your inputs.");
+      return; // Stop further execution
+    }
+
+    //  Check if the required fields are not empty
+    if (!businessName || !email || !location || !businessNumber || !businessType) {
+      alert("Please fill in all required fields.");
+      return; // Stop further execution
+    }
+
+    // Display a success message
+    alert("Account created successfully! Redirecting to the profile page.");
+
+    //  Redirect to the profile page (replace 'profile.html' with the actual filename of your profile page)
+    window.location.href = 'profile.html';
+  });
+</script>
