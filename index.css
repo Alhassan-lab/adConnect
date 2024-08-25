@@ -2,6 +2,9 @@ body {
     background-color: #0c1527;
     color: #EEE;
     font-family: 'Outfit', serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .main-header {
@@ -15,6 +18,8 @@ body {
 
 .image-menu {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     flex: 1;
     height: 100px; 
     width: 90px;
@@ -28,7 +33,9 @@ body {
 }
 
 .account {
-    display: inline;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .nav-links {
